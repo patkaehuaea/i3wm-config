@@ -143,10 +143,13 @@ for_window [title="Login | ProtonMail"] move window to workspace $ws3
 assign [class="[s|S]ignal"] $ws4
 assign [class="[m|M]icrosoft [t|T]eams - [p|P]review"] $ws4
 assign [class="[s|S]lack"] $ws4
+assign [class="[d|D]iscord"] $ws4
 
 # $ws5
 assign [class="vlc"] $ws5
-assign [class="Spotify" title="Spotify Premium"] $ws5
+# Must use 'for_window' with Spotify.
+# re: https://wiki.archlinux.org/index.php/i3#Default_workspace_for_Spotify
+for_window [class="Spotify"] move --no-auto-back-and-forth to workspace $ws5
 
 # $ws6
 assign [class="VirtualBox Manage"] $ws6
@@ -204,7 +207,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 bindsym $mod+d exec rofi -show drun -location 0 -theme ~/.config/rofi/launchers/nord.rasi
 # Use 'flashfocus-git' aur package to show current window.
-bindsym $mod+n exec --no-startup-id flash_window
+# bindsym $mod+n exec --no-startup-id flash_window
 
 #*********************************************************************************
 
@@ -214,7 +217,7 @@ bindsym $mod+n exec --no-startup-id flash_window
 
 #exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/forest.jpg
 exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/alexandr-popadin-YXE2-HUI0iU-unsplash.jpg
-exec --no-startup-id flashfocus
+#exec --no-startup-id flashfocus
 exec --no-startup-id pamac-tray
 exec --no-startup-id blueman-tray
 exec --no-startup-id nm-applet
