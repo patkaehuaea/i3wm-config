@@ -139,7 +139,7 @@ for_window [title="Mail - Pat Kaehuaea - Outlook"] move window to workspace $ws3
 for_window [title="*Inbox | pat@kaehuaea.me | ProtonMail"] move window to workspace $ws3
 for_window [title="Login | ProtonMail"] move window to workspace $ws3
 
-# $ws3
+# $ws4
 assign [class="[s|S]ignal"] $ws4
 assign [class="[m|M]icrosoft [t|T]eams - [p|P]review"] $ws4
 assign [class="[s|S]lack"] $ws4
@@ -184,7 +184,7 @@ mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
+       # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
         bindsym j resize shrink width 10 px or 10 ppt
