@@ -146,8 +146,7 @@ assign [class="[s|S]lack"] $ws4
 
 # $ws5
 assign [class="vlc"] $ws5
-assign [class="Spotify" title="Spotify Premium"] $ws2
-assign [class="Spotify"] $ws5
+assign [class="Spotify" title="Spotify Premium"] $ws5
 
 # $ws6
 assign [class="VirtualBox Manage"] $ws6
@@ -220,8 +219,6 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id blueman-tray
 exec --no-startup-id nm-applet
 #exec --no-startup-id redshift -b 1.0:.85 -l geoclue2 -t 10500:4500
-exec --no-startup-id chrome
-exec --no-startup-id spotify
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id picom
 
