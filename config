@@ -124,7 +124,6 @@ set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
-set $ws6 "6"
 
 # $ws1
 assign [class="Alacritty"] $ws1
@@ -135,25 +134,25 @@ assign [class="[g|G]oogle-[c|C]hrome"] $ws2
 
 # $ws3
 # Do not specify "firefox" class or $ws2 match will not work.
-for_window [title="Mail - Pat Kaehuaea - Outlook"] move window to workspace $ws3
-for_window [title="*Inbox | pat@kaehuaea.me | ProtonMail"] move window to workspace $ws3
-for_window [title="Login | ProtonMail"] move window to workspace $ws3
+#for_window [title="Mail - Pat Kaehuaea - Outlook"] move window to workspace $ws3
+#for_window [title="*Inbox | pat@kaehuaea.me | ProtonMail"] move window to workspace $ws3
+#for_window [title="Login | ProtonMail"] move window to workspace $ws3
+
+# $ws3
+assign [class="[s|S]ignal"] $ws3
+assign [class="[m|M]icrosoft [t|T]eams - [p|P]review"] $ws3
+assign [class="[s|S]lack"] $ws3
+assign [class="[d|D]iscord"] $ws3
 
 # $ws4
-assign [class="[s|S]ignal"] $ws4
-assign [class="[m|M]icrosoft [t|T]eams - [p|P]review"] $ws4
-assign [class="[s|S]lack"] $ws4
-assign [class="[d|D]iscord"] $ws4
-
-# $ws5
-assign [class="vlc"] $ws5
+assign [class="vlc"] $ws4
 # Must use 'for_window' with Spotify.
 # re: https://wiki.archlinux.org/index.php/i3#Default_workspace_for_Spotify
-for_window [class="Spotify"] move --no-auto-back-and-forth to workspace $ws5
+for_window [class="Spotify"] move --no-auto-back-and-forth to workspace $ws4
 
-# $ws6
-assign [class="VirtualBox Manage"] $ws6
-assign [class="VirtualBox Machine"] $ws6
+# $ws5
+assign [class="VirtualBox Manage"] $ws5
+assign [class="VirtualBox Machine"] $ws5
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -161,7 +160,6 @@ bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -169,7 +167,6 @@ bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -223,7 +220,6 @@ exec --no-startup-id blueman-tray
 exec --no-startup-id nm-applet
 #exec --no-startup-id redshift -b 1.0:.85 -l geoclue2 -t 10500:4500
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id picom
 
 #********************************************************************************
 
@@ -283,3 +279,5 @@ gaps outer 5
 
 # Activate smart borders (always)
 smart_borders on
+
+#border_radius 6
